@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>003</title>
+
+
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+    }
+
+    body {
+      background-color: #ffffff;
+      margin: 0;
+      overflow: hidden;
+      font-family: arial;
+    }
+
+    #blocker {
+
+      position: absolute;
+
+      width: 100%;
+      height: 100%;
+
+      background-color: rgba(0,0,0,0.5);
+
+    }
+
+    #instructions {
+
+      width: 100%;
+      height: 100%;
+
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+
+      -webkit-box-orient: horizontal;
+      -moz-box-orient: horizontal;
+      box-orient: horizontal;
+
+      -webkit-box-pack: center;
+      -moz-box-pack: center;
+      box-pack: center;
+
+      -webkit-box-align: center;
+      -moz-box-align: center;
+      box-align: center;
+
+      color: #ffffff;
+      text-align: center;
+
+      cursor: pointer;
+
+    }
+
+
+    .cubeNum-container {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      transition: transform 0.5s 4s;
+    }
+
+    .cubeNum-container #cubeNum {
+      color: white;
+      font-size: 5vh;
+      font-family: 'Exo', sans-serif;
+      font-weight: 600;
+    }
+
+    .cubeNum-container #life {
+      color: white;
+      font-size: 3vh;
+      font-family: 'Exo', sans-serif;
+      font-weight: 600;
+    }
+
+
+    .menu { color: #fff; font-weight: bold; font-size: 12px; z-index: 100; width: 75px; position: absolute; top: 0px; padding: 16px; }
+
+    .menu img, .menu canvas { width: 50px; margin: 6px 0 }
+
+    #images { background: rgba(0,0,0,0); left: 0px; }
+
+
+  </style>
+
+</head>
+<body>
+
+<div class="cubeNum-container">
+  <div id="cubeNum"></div>
+  <div id="life"></div>
+
+</div>
+
+
+<div id="images" class="menu">
+
+  <h3>cube texture</h3>
+
+  <a id="img_0" href="#"><img src="textures/CastleBlock001.PNG" /></a>  1
+  <a id="img_1" href="#"><img src="textures/DirtSolid001.PNG" /></a>  2
+  <a id="img_2" href="#"><img src="textures/Glass001.PNG" /></a>  3
+  <a id="img_3" href="#"><img src="textures/Gold001.PNG" /></a>  4
+  <a id="img_4" href="#"><img src="textures/GrassSolid001.PNG" /></a>  5
+  <a id="img_5" href="#"><img src="textures/GravelSolid001.PNG" /></a>  6
+  <a id="img_6" href="#"><img src="textures/Stone002.PNG" /></a>  7
+  <a id="img_7" href="#"><img src="textures/StoneSolid001.PNG" /></a>  8
+  <a id="img_8" href="#"><img src="textures/TreeLeaves001.PNG" /></a>  9
+
+
+</div>
+
+<!--<div id="message" style="color:aquamarine; background-color: #a06cc2;"></div>-->
+
+<div id="blocker">
+
+  <div id="instructions">
+    <span style="font-size:40px">Click to play</span>
+    <br />
+    (W, A, S, D = Move, SPACE = Jump, MOUSE = Look around)
+  </div>
+
+</div>
+
+<div id="gameover" style="display: none"></div>
+
+<div id="webgl-container" style="display: inline"></div>
+
+
+
+<script src="js/three/build/three.min.js"></script>
+<script src="js/PointerLockControls.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
