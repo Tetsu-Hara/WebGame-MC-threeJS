@@ -20,11 +20,11 @@ var direction = new THREE.Vector2();
 var cubeTexture = [];
 var textureIndex = 0;
 
-var cubeNum = 100;
+var cubeNum = 50;
 var cubeNumText = document.getElementById("cubeNum");
 var cubes = [];  //新出现的cube
 
-var lifeNum = 10;
+var lifeNum = 50;
 var lifeNumText = document.getElementById("life");
 var collideMeshList = [];  //lifeCube的碰撞列表
 
@@ -453,7 +453,7 @@ function collisionBox(){
   if(iscrash){
     scene.remove( collisionResults[0].object );
     collideMeshList.splice( collideMeshList.indexOf( collisionResults[0].object ), 1 );
-    lifeNum += 10;
+    lifeNum += 50;
   }
 
 
